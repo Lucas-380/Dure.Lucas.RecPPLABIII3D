@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Modelo Parcial</title>
+</head>
+<body>
+    
+    <header id="header">
+        <nav>
+            <a href="./index.html"><img id="logo" src="./assets/logo.png" alt="logo-calabaza-halloween"></a>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Monstruos.html">Monstruos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="titulo">Crud Monstruos</h1>
+    
+        <div id="notificacion" hidden>
+
+        </div>
+
+        <form id="formMonstruo" action="#" method="get">
+            <fieldset id="fieldsetForm">
+                <legend>Informacion del monstruo</legend>
+
+                <label class="lblForm" for="txtNombre">
+                    <img width="24" height="24" src="https://img.icons8.com/color/48/thriller.png" alt="thriller"/> Nombre:</label>
+                <input type="text" class="inputForm" id="txtNombre" name="nombre" autocomplete="off" placeholder="ingrese nombre" required/>
+                
+                <label class="lblForm" for="txtAlias">
+                    <img width="24" height="24" src="https://img.icons8.com/color/48/mummy.png" alt="mummy"/> Alias:</label>
+                <input type="text" class="inputForm" id="txtAlias" name="nombre" autocomplete="off" placeholder="ingrese alter-ego" required/>
+                
+                <label class="lblForm">
+                    
+                    <img width="24" height="24" src="https://img.icons8.com/external-filled-outline-satawat-anukul/64/external-halloween-halloween-filled-outline-filled-outline-satawat-anukul-33.png" alt="external-halloween-halloween-filled-outline-filled-outline-satawat-anukul-33"/> Defensa</label>
+                    <div id="container-rdb">
+                        <input class="inputRdbForm" type="radio" id="pocion" name="rdbDefensa" value="pocion" required>POCION                
+                        <input class="inputRdbForm" type="radio" id="crucifijo" name="rdbDefensa" value="crucifijo">CRUCIFIJO
+                        <input class="inputRdbForm" type="radio" id="estaca" name="rdbDefensa" value="estaca">ESTACA
+                        <input class="inputRdbForm" type="radio" id="plata" name="rdbDefensa" value="plata">PLATA
+                    </div>
+                
+                <label class="lblForm" for="rngMiedo">
+                    <img width="24" height="24" src="https://img.icons8.com/fluency/48/headstone.png" alt="headstone" required/> MIEDO</label>
+                    <input type="range" id="rngMiedo" name="rngMiedo" min="0" max="100" step="1">
+                
+                <!-- Se carga dinamicamente desde un array guardado en el local storage -->
+                <label class="lblForm"> 
+                    <img width="24" height="24" src="https://img.icons8.com/external-flat-satawat-anukul/64/external-halloween-halloween-flat-flat-satawat-anukul-11.png" alt="external-halloween-halloween-flat-flat-satawat-anukul-11"/> Tipos</label>
+                    <div id="menuDeTipos">
+                    </div>
+                
+                <!-- RECUPERATORIO  -->
+                <div class="lblForm">
+                    <label class="lblForm" for="checkEnemigos">Enemigos</label>
+                    <input type="checkbox" name="checkEnemigos" id="heroes" class="inputRdbForm"> Heroes
+                    <input type="checkbox" name="checkEnemigos" id="humanos" class="inputRdbForm"> Humanos
+                    <input type="checkbox" name="checkEnemigos" id="demonios" class="inputRdbForm"> Demonios
+                    <input type="checkbox" name="checkEnemigos" id="niños" class="inputRdbForm"> Niños
+                </div>
+    
+            <button id="btnGuardar" class="btn" type="submit">
+                <img width="30" height="30" src="https://img.icons8.com/cotton/64/000000/save.png " alt="save"/> Guardar</button>
+            <button id="btnModificar" class="btn" type="button" hidden> Modificar</button>
+            <button id="btnCancelar" class="btn" type="reset" hidden> Cancelar</button>
+            <button id="btnEliminar" class="btn" type="reset" hidden> Eliminar</button>
+
+            </fieldset>
+        </form>
+    
+        <section id="listadoDeMonstruos">
+            <table id="tablaDeMonstruos">
+                <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Alias</th>
+                    <th>Defensa</th>
+                    <th>Miedo</th>
+                    <th>Tipo</th>
+                    <th>Enemigos</th>
+                    </tr>
+                </thead>
+                <!-- Se carga dinamicamente -->
+                <tbody id="listaMonstruo">
+    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Personajes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <p class="copyright">Laboratorio III - Todos los derechos reservados 2023©</p>
+        </nav>
+    </footer>
+
+    <script src="./js/class/Personaje.js"></script>
+    <script src="./js/class/Monstruo.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

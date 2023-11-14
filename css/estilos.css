@@ -1,0 +1,268 @@
+*{
+    font-family: Creepster;
+    font-size: large;
+}
+
+#titulo{
+    font-size: 50px;
+    margin: 15px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/2874489.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#formMonstruo{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 0, 0, 0.5);
+}
+
+/* --Header-- */
+#logo{
+    margin-left: 50px;
+    width: 20vh;
+    height: 18vh;
+    transition: all 0.3s ease;
+}
+#logo:hover{
+    width: 21vh;
+    height: 19vh;
+}
+
+#header nav{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.70);
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+#header nav ul{
+    list-style: none;
+}
+
+#header nav li{
+    display: inline;
+    margin-right: 20px;
+}
+
+#header nav a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+#header nav a:hover{
+    color: rgb(80, 15, 235);
+}
+
+/* --Footer-- */
+#footer .copyright{
+    color: white;
+}
+
+#footer nav{
+    display: flex;
+    background-color: black;
+    height: 75px;
+    align-items: center;
+    justify-content: space-around;
+}
+  
+#footer nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer nav li{
+    display: inline;
+    margin-right: 20px;
+}
+
+#footer nav a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+#footer nav a:hover{
+    color: rgb(80, 15, 235);
+}
+
+#loading{
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* --Body-- */
+/* ------------------------------------Formulario------------------------------------ */
+#fieldsetForm{
+    color: black;
+    background-color: rgba(60, 30, 75, 0.900);
+    border-radius: 10px;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 10px 35px;
+    width: 50%;
+}
+
+.lblForm{
+    display: flex;
+}
+
+.inputForm{
+    background-color: rgb(50, 30, 75);
+    border-radius: 5px;
+    border: 1px white solid;
+    color: white;
+    margin-bottom: 20px;
+    padding: 10px 2px;
+    width: 100%;
+}
+
+#container-rdb{
+    display: flex;
+    justify-content: space-around;
+}
+
+.inputRdbForm{
+    background-color: rgb(50, 30, 75);
+    border: 1px white solid;
+    padding: 10px 2px;
+    margin-bottom: 20px;
+}
+
+#rngMiedo{
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.btn{
+    margin: 5px 5px;
+    min-width: 100px;
+    height: 50px;
+    color: #fff;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid white;
+    background: rgb(50, 30, 75);
+}
+.btn:hover {
+    background: white;
+    color: rgb(60, 30, 75)
+}
+.btn img{
+    vertical-align: middle;
+}
+  
+/* ------------------------------------Listado------------------------------------ */
+#listadoDeMonstruos{
+    margin: 0 auto; 
+    width: 85%;
+}
+
+#tablaDeMonstruos {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    border-collapse:collapse;
+    margin: 25px auto;
+    width: 100%;
+}
+
+#tablaDeMonstruos thead{
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    height: 50px;
+    background-color: rgb(60, 30, 75);
+}
+
+table, th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+#listaMonstruo{
+    color: white;
+    background-color: rgba(60, 30, 75, 0.900);
+}
+
+#listaMonstruo td{
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+}
+
+/* media queris */
+@media screen and (max-width: 767px) {
+    #header nav{
+        height: 90px;
+    }
+    #header nav li{
+        display: block;
+        margin-right: 20px;
+    }
+    #logo{
+        margin-left: 20px;
+        display: none;
+    }
+
+    #footer nav{
+        height: 90px;
+        align-items:end;
+    }
+    
+    #footer nav li{
+        display: block;
+        margin-right: 20px;
+    }
+
+    #footer .copyright{
+        font-size: 12px;
+    }      
+}
+
+.contenedorDeTarjeta {
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta {
+    color: #fff;
+    background-color: rgba(60, 30, 75, 0.900);
+    width: 250px;
+    padding: 25px;
+    list-style: none;
+    border-radius: 10px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+#notificacion{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 1;
+    background-color: rgba(75, 30, 34, 0.9);
+    border-radius: 10px;
+    border-color: #fff;
+    border-style: solid;
+}
+#notificacion p{
+    padding: 50px;
+    color: rgb(255, 0, 0);
+}
